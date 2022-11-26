@@ -24,7 +24,7 @@ public class ReservaResource {
     @Path("/new-reserva")
     public Response newReserva(){
         Cliente cliente = clienteService.findById(2).readEntity(Cliente.class);
-        Response response = reservaService.newReserva(Reserva.of(cliente));
+        Response response = reservaService.newReserva(Reserva.of(cliente.getId()));
         return response;
     }
 

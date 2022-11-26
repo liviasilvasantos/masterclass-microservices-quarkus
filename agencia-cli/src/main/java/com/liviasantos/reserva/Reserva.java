@@ -1,24 +1,22 @@
 package com.liviasantos.reserva;
 
-import com.liviasantos.cliente.Cliente;
-
 public class Reserva {
 
-    private Cliente cliente;
+    private long idCliente;
 
-    private Reserva(Cliente cliente) {
-        this.cliente = cliente;
+    private Reserva(final long idCliente) {
+        this.idCliente = idCliente;
     }
 
-    public static Reserva of(final Cliente cliente){
-        return new Reserva(cliente);
+    public static Reserva of(final long idCliente) {
+        return new Reserva(idCliente);
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public long getIdCliente() {
+        return idCliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setIdCliente(long idCliente) {
+        this.idCliente = idCliente;
     }
 }

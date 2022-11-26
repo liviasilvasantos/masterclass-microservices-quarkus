@@ -6,7 +6,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@RegisterRestClient(baseUri = "http://localhost:8080/clientes")
+@RegisterRestClient(baseUri = "http://localhost:8081/clientes")
 public interface ClienteService {
 
     @POST
