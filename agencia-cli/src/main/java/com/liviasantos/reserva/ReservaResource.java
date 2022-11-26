@@ -1,6 +1,7 @@
 package com.liviasantos.reserva;
 
 import com.liviasantos.cliente.Cliente;
+import com.liviasantos.cliente.ClienteService;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.inject.Inject;
@@ -15,10 +16,14 @@ public class ReservaResource {
     @RestClient
     private ReservaService reservaService;
 
+    @Inject
+    @RestClient
+    private ClienteService clienteService;
+
     @GET
     @Path("/new-reserva")
     public Response newReserva(){
-        Cliente cliente = Cliente.of(2, "Maria");
+        Cliente cliente = clienteService.findById(2).readEntity(Cliente.class);
         Response response = reservaService.newReserva(Reserva.of(cliente));
         return response;
     }
