@@ -124,12 +124,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8081/cliente-cli/new-cliente",
+					"raw": "http://localhost:8888/cliente-cli/new-cliente",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8081",
+					"port": "8888",
 					"path": [
 						"cliente-cli",
 						"new-cliente"
@@ -144,12 +144,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8081/reserva-cli/new-reserva",
+					"raw": "http://localhost:8888/reserva-cli/new-reserva",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8081",
+					"port": "8888",
 					"path": [
 						"reserva-cli",
 						"new-reserva"
