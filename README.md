@@ -17,7 +17,7 @@ https://code.quarkus.io/
 
 > mvn quarkus:add-extension -Dextension="quarkus-smallrye-health"
 
-http://localhost:8080/q/health 
+Acessar: http://localhost:8080/q/health 
 
 > mvn quarkus:add-extension -Dextension="quarkus-smallrye-fault-tolerance"
 
@@ -25,13 +25,13 @@ http://localhost:8080/q/health
 
 --
 
-Livenesse Probe: indica se a app está viva, rodando. Kubernetes checa de tempos em tempos se a app está up, senão, o Kubernetes vai restartar o pod. Exposto em um endpoint.
+**Livenesse Probe:** indica se a app está viva, rodando. Kubernetes checa de tempos em tempos se a app está up, senão, o Kubernetes vai restartar o pod. Exposto em um endpoint.
 
-Readiness Probe: indica se a app está pronta para receber requests, dependendo da regra de negócio de cada app. Kubernetes checa de tempos em tempos se a app está pronta, mas não faz nada. Exposto em um endpoint.
+**Readiness Probe:** indica se a app está pronta para receber requests, dependendo da regra de negócio de cada app. Kubernetes checa de tempos em tempos se a app está pronta, mas não faz nada. Exposto em um endpoint.
 
 SmallRye = implementação do microprofile disponível no quarkus. 
 
-Circuit Breaker
+## Circuit Breaker
 
 - requestVolumeThreshold = quantidade de requisições que serão a amostra. Se o valor for 4, no intervalo de 4 requisições, serão validados os outros parâmetros definidos no circuit breaker.
 
@@ -46,7 +46,7 @@ Circuit Breaker
 Baixar client do OpenShift Container
 
 https://access.redhat.com/downloads/content/290/ver=4.9/rhel---8/4.9.52/x86_64/product-software
-oc-4.9.52-macosx.zip
+- oc-4.9.52-macosx.zip
 
 > mvn clean package -Dquarkus.kubernetes.deploy=true
 
