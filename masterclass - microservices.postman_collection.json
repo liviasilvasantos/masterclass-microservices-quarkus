@@ -139,6 +139,32 @@
 			"response": []
 		},
 		{
+			"name": "cliente-cli - find by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/cliente-cli/find-by-id?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"cliente-cli",
+						"find-by-id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "reserva-cli - new reserva",
 			"request": {
 				"method": "GET",
@@ -153,6 +179,44 @@
 					"path": [
 						"reserva-cli",
 						"new-reserva"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "micro-cliente - get all clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "micro-reserva- get all reservas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/reservas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"reservas"
 					]
 				}
 			},
