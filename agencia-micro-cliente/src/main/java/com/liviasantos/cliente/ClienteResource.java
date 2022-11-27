@@ -19,7 +19,7 @@ public class ClienteResource {
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response findById(@PathParam("id") final long id) throws InterruptedException {
-        Thread.sleep(5000);
+//        Thread.sleep(5000);
         var cliente = Cliente.findById(id);
         return Response.ok(cliente).build();
     }
